@@ -10,7 +10,7 @@ public class Branching4_5 {
         System.out.println("Введите целое число: ");
         int input = console.nextInt();
 
-        if ((input >= 65 && input <= 90 ) || (input >= 97 && input <= 122)) {//  вдесятичной большие латинские буквы от 65 до 90,
+        if ((input >= 65 && input <= 90 ) || (input >= 97 && input <= 122)) {//  в десятичной большие латинские буквы от 65 до 90,
             // маленькие от 97 до 122
             System.out.println("It is a letter");
         }else{
