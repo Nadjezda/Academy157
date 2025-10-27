@@ -1,5 +1,8 @@
 package homeWork1;
 
+import java.beans.PropertyEditorSupport;
+import java.util.Objects;
+
 public class InkremDekrem2 {
     public static void main(String[] args) {
         //2. Изучить приоритетность операторов по таблице в презентации. Сначала посчитать результаты всех ниже приведённых примеров устно,
@@ -20,39 +23,40 @@ public class InkremDekrem2 {
         int a = 2;
         int b = 8;
         int c2_1 = 5 + a / b;
-        System.out.println(c2_1);// результат деления целых чисел  2 на 8 будет ноль
+        System.out.println("пример 2.1 = " + c2_1);// результат деления целых чисел  2 на 8 будет ноль
 
         int c2_2 = (5 + a) / b;
-        System.out.println(c2_2);//результат деления целых чисел  7 на 8 будет ноль
+        System.out.println("пример 2.2 = " + c2_2);//результат деления целых чисел  7 на 8 будет ноль
 
         int c2_3 = (5 + a ++) / b;
         a = 2;
-        System.out.println(c2_3);//результат деления целых чисел  7 на 8 будет ноль
+        System.out.println("пример 2.3 = " + c2_3);//результат деления целых чисел  7 на 8 будет ноль
 
         int c2_4 = (5 + a++) / -- b;
         a = 2;
         b = 8;
-        System.out.println(c2_4);//результат деления целых чисел  7 на 7 будет 1
+        System.out.println("пример 2.4 = " + c2_4);//результат деления целых чисел  7 на 7 будет 1
 
         int c2_5 = (5 * 2 >> a ++) / -- b;
         a = 2;
         b = 8;
-        System.out.println(c2_5);///результат деления целых чисел  2 на 7 будет ноль
+        System.out.println("пример 2.5 = " + c2_5);///результат деления целых чисел  2 на 7 будет ноль
 
         int c2_6 = (5 + 7 > 20 ? 68 : 22 * 2 >> a ++) / -- b;
         a = 2;
         b = 8;
-        System.out.println(c2_6);//результат деления целых чисел 11 на 7 будет 1
+        System.out.println("пример 2.6 = " + c2_6);//результат деления целых чисел 11 на 7 будет 1
 
-//        int c2_7 = (5 + 7 > 20 ? 68 >= 68 : 22 * 2 >> 2++) / -- b;
-//        a = 2;
-//        b = 8;
-//        System.out.println(c2_7); не работает, ошибка компиляции bad operand types for binary operator '/', получается (if 12 > 20( false) то true, else 11) / 7
+         Object t = 5 + 7 > 20 ? 68 >= 68 : 22 * 2 >> a++;
+         int result = (int) t / --b;
+        a = 2;
+        b = 8;
+        System.out.println("пример 2.7 = " +result); //не работает, получается (if 12 > 20( false) то true, else 11) / 7
 
         boolean c2_8 = 6 - 2 > 3 && 12 * 12 <= 119;
-        System.out.println(c2_8);// конечное значение true && false результат будет false по правилам логических операций
+        System.out.println("пример 2.8 = " + c2_8);// конечное значение true && false результат будет false по правилам логических операций
 
         boolean c2_9 = true && false;
-        System.out.println(c2_9);//результат будет false по правилам логических операций
+        System.out.println("пример 2.9 = " + c2_9);//результат будет false по правилам логических операций
     }
 }

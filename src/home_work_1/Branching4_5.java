@@ -9,6 +9,7 @@ public class Branching4_5 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите целое число: ");
         int input = console.nextInt();
+        console.close();
 
         if ((input >= 65 && input <= 90 ) || (input >= 97 && input <= 122)) {//  в десятичной большие латинские буквы от 65 до 90,
             // маленькие от 97 до 122

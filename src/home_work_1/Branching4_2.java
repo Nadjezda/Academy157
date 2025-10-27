@@ -7,48 +7,26 @@ public class Branching4_2 {
         //4.2 Среди трёх чисел найти среднее, которое больше минимального, но меньше максимального
         Scanner console = new Scanner(System.in);
         System.out.println("Enter number1: ");
-        int a = console.nextInt();
+        int number1 = console.nextInt();
         System.out.println("Enter number2: ");
-        int b = console.nextInt();
+        int number2 = console.nextInt();
         System.out.println("Enter number3: ");
-        int c = console.nextInt();
-        System.out.println("Your numbers are: " + a + "," + b + "," + c);
-        int min = 0;
-        int max = 0;
-        int midle = 0;
+        int number3 = console.nextInt();
+        System.out.println("Your numbers are: " + number1 + "," + number2 + "," + number3);
+        console.close();
 
-        if (a < b && a < c) {// находим минимальное
-            min = a;
-            System.out.println("Min number is: " + min);
-        }else if (b < a && b < c) {
-            min = b;
-            System.out.println("Min number is: " + min);
-        }else if (c < a && c < b) {
-            min = c;
-            System.out.println("Min number is: " + min);
-        }else{
-            System.out.println("We have no one min number");
-             }
-
-        if (a > b && a > c) {//находим максимальное
-            max = a;
-            System.out.println("Max number is: " + max);
-        }else if (b > a && b > c) {
-            max = b;
-            System.out.println("Max number is: " + max);
-        }else if (c > a && c > b) {
-            max = c;
-            System.out.println("Max number is: " + max);
-        }else{
-            System.out.println("We have no one max number");
-        }
-
-        if ((a == b) || (a == c) || (b == c)) {//находим среднее
-            System.out.println("Нет среднего");
+        if (number3 == number2 && number2 == number1) {
+            System.out.println("We haven't middle number");
         } else {
-            midle = (a + b + c) - min - max;
-            System.out.println("Среднее значение: " + midle);
+            int max = Math.max(number1, number2);
+            int max1 = Math.max(number2, number3);
+            if (max1 == max) {
+                System.out.println("The middle is: " + Math.max(number1, number3));
+            } else {
+                System.out.println("The middle is: " + Math.min(max, max1));
+            }
         }
     }
 }
+
 

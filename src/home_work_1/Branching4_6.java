@@ -9,6 +9,7 @@ public class Branching4_6 {
         System.out.println("Введите год: ");
         int year = console.nextInt();
         System.out.println("Ваш год " + year);
+        console.close();
 
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
             System.out.println("Год високосный");

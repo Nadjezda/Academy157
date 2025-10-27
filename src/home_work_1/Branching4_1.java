@@ -12,6 +12,7 @@ public class Branching4_1 {
         System.out.println("Введите второе число ");
         int b = console.nextInt();
         System.out.println("Ваше число: " + b);
+        console.close();
 
         if (a % 2 != 0) {
             System.out.println("Error");

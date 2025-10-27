@@ -16,6 +16,7 @@ public class HomeIf6_1 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите ваше имя: ");
         String input = console.nextLine();
+        console.close();
 
         if ((Objects.equals(input, "Вася")) || (Objects.equals(input, "Анастасия"))) {
             if (Objects.equals(input, "Вася")) {

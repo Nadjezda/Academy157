@@ -15,11 +15,11 @@ public class HomeIf6_3 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите Ваше имя: ");
         String input = console.nextLine();
+        console.close();
 
         switch (input) {
             case "Вася":
-                System.out.print("Привет. \nЯ тебя так долго ждал.");
-                break;
+                System.out.print("Привет.");
             case "Анастасия":
                 System.out.println("Я тебя так долго ждал.");
                 break;

@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work1;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class Branching4_3 {
         System.out.println("Введите число на которое будем делить: ");
         int delitel = console.nextInt();
         System.out.println("Your numbers are: " + delimoye + "," + delitel);
+        console.close();
         int answer = delimoye / delitel;
         int rest = delimoye % delitel;
 
