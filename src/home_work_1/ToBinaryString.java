@@ -11,17 +11,19 @@ public class ToBinaryString {
     //	8.3 Вводим: -42. Возвращает: 11010110
     //	8.4 Вводим: -15. Возвращает: 11110001
     public static void main(String[] args) {
-        ;
-        int[] arr = binaryPositivNumbers(42);
-        print(42, arr);
-        int[] arr1 = binaryPositivNumbers(15);
-        print(15, arr1);
+        int[] arrayBinary42 = binaryPositiveNumbers(42);
+        print(42, arrayBinary42);
+        int[] arrayBinary15 = binaryPositiveNumbers(15);
+        print(15, arrayBinary15);
+        int [] invertNumber42 = invertNumber(arrayBinary42);
+        int [] arrayBinary42negative = negativeBinaryNumber(invertNumber42);
+        print(-42, arrayBinary42negative);
+        int [] invertNumber15 = invertNumber(arrayBinary15);
+        int [] arrayBinary15negative = negativeBinaryNumber(invertNumber15);
+        print(-15, arrayBinary15negative);
 
     }
-    //8.3 Вводим: -42. Возвращает: 11010110
-    //8.4 Вводим: -15. Возвращает: 11110001
-
-    public static int[] binaryPositivNumbers(int number) {
+    public static int[] binaryPositiveNumbers(int number) {
         int[] binaryNumber = new int[8];
         for (int i = binaryNumber.length - 1; i >= 0; i--) {
             if (number >= 0) {
@@ -45,10 +47,37 @@ public class ToBinaryString {
         System.out.println("- двоичное число ");
     }
 
+    public static int[] invertNumber(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                arr[i] = 1;
+            } else {
+                arr[i] = 0;
+            }
+        }
+            return arr;
+        }
 
-
+    public static int[] negativeBinaryNumber(int array[])  {
+        for (int i = array.length-1; i >= 0; i--) {
+            if (array[i] == 0) {
+                array[i] = 1;
+                break;
+            } else {
+                array[i - 1] = 1;
+                array[i] = 0;
+                break;
+            }
+        }
+            return array;
+    }
 
 }
+
+
+
+
+
 
 
 
