@@ -8,9 +8,10 @@ public class Vail1_1 {
     //    	1.1.1. Используя только цикл
 
     public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);//используем класс Scanner  в котором используем класс System  в котором используем объект in
-        System.out.println("Enter the number from (1 till 21): "); // для избежания переполнения
-        long enterNumber = console.nextLong();
+
+
+        long enterNumber = Integer.parseInt(args[0]);
+
         long composition = 1; // для результата умножения
         if (enterNumber >= 21 || enterNumber <= 0) { // ограничение для избежаничя ошибок
             System.out.println("Введите число от 1 до 21");
