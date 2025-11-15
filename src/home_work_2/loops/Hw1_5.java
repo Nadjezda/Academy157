@@ -12,35 +12,32 @@ public class Hw1_5 {
 //    	1.5.5. Вывести ряд чисел в диапазоне с шагом
 //    	1.5.6. Переворот числа
     public static void main(String[] args) {
-        max();
-        probability();
-        evenAndOdd();
-        fibonachi();
+//        max();
+//        probability();
+//        evenAndOdd();
+//        fibonachi();
         step();
-        revers();
+//        revers();
     }
-   public static void max(){
-        Scanner console = new Scanner(System.in);
-        System.out.println("Input the number");
-        long input = console.nextLong();
-        long maxNumber = 0;// для сравнения и поиска максимального
+   public static void max() {
+       Scanner console = new Scanner(System.in);
+       System.out.println("Input the number");
+       long input = console.nextLong();
+       long maxNumber = 0;// для сравнения и поиска максимального
 
-        if(input <= 0){
-            System.out.println("Error");
-        }else {
-            while (input % 10 != 0) {// для поиска максимальной цифры в числе
-                long result = 1; // временная переменная
-                result = input % 10;
-                if (result > maxNumber) {
-                    maxNumber = result;
-                } else {
-                    maxNumber = maxNumber;
-                }
-            input = input /10;
-            }
-        }
-        System.out.println("Max number is: " + maxNumber);
-    }// для нахождения наибольшей цифры 1.5.1
+       if (input <= 0) {
+           System.out.println("Error");
+       } else {
+           while (input % 10 != 0) {// для поиска максимальной цифры в числе
+               long result = 1; // временная переменная
+               result = input % 10;
+               maxNumber = Math.max(result, maxNumber);
+               input = input / 10;
+           }
+           System.out.println("Max number is: " + maxNumber);
+       }
+   }
+        // для нахождения наибольшей цифры 1.5.1
    public static void probability(){
        int numberOfInput = 1000;//выборка
        int evenNumbers = 0;//четные в выборке
@@ -107,19 +104,24 @@ public class Hw1_5 {
        System.out.println("Введите максимальное натуральное число");
        long maxNumber = console.nextLong();
        System.out.println("Введите шаг");
-       long step = console.nextLong();
+       double step = console.nextDouble();
 
-
-       if(minNumber <= 0 || minNumber > Long.MAX_VALUE || step <= 0){ //проверка на ошибки ввода данных
+       if (minNumber <= 0 |  step <= 0) { //проверка на ошибки ввода данных
            System.out.println("Введите корректные данные");
+       } else {
+           System.out.print(minNumber + " ");// для начала вывода данных
+
+           double tmp = Math.ceil(maxNumber / step);
+           for (int i = 1; i < tmp; i++) {// цикл для вывода цифр с шагом
+               long tmp1 = (long) (minNumber + step);// в данном случае точность данных не имеет значения
+               if ((tmp1) <= maxNumber) {
+                   System.out.print((tmp1) + " ");
+                   minNumber = tmp1;
+               }
+           }
        }
-       System.out.print(minNumber +" "); // для начала вывода данных
-       for (int i = 1; i < (maxNumber / step) ; i++) { // цикл для вывода цифр с шагом
-           System.out.print( (minNumber + step) + " ");
-           minNumber += step;
-       }
-       System.out.println();
-       } //Вывести ряд чисел в диапазоне с шагом 1.5.5
+              System.out.println();
+   }//Вывести ряд чисел в диапазоне с шагом 1.5.5
    public static void revers() {
        Scanner console = new Scanner(System.in); // для ввода информации
        System.out.println("Enter the number");
