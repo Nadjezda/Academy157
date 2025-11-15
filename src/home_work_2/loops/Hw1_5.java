@@ -12,12 +12,12 @@ public class Hw1_5 {
 //    	1.5.5. Вывести ряд чисел в диапазоне с шагом
 //    	1.5.6. Переворот числа
     public static void main(String[] args) {
-//        max();
-//        probability();
-//        evenAndOdd();
-//        fibonachi();
+        max();
+        probability();
+        evenAndOdd();
+        fibonachi();
         step();
-//        revers();
+        revers();
     }
    public static void max() {
        Scanner console = new Scanner(System.in);
