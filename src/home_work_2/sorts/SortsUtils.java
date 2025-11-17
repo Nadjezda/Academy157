@@ -1,5 +1,11 @@
 package home_work_2.sorts;
 
+//4.1. Создать класс SortsUtils. В этом классе не должно быть main метода. В этом классе написать следующие методы:
+//		4.1.1. Написать метод public static void sort(int[] arr). Данный метод будет сортировать переданный ему массив
+//		при помощи алгоритма пузырьковая сортировка. Описание алгоритма: https://prog-cpp.ru/sort-bubble/
+//		4.1.2. Написать метод public static void shake(int[] arr). Данный метод будет сортировать переданный ему массив
+//		при помощи алгоритма шейкерная сортировка. Описание алгоритма: https://prog-cpp.ru/sort-shaker/
+
 public class SortsUtils {
     public static int[] sort(int[] arr, int i) {//пузырьковая сортиторка
         for (int j = arr.length - 1; j >= 1; j--) {

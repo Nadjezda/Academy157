@@ -2,6 +2,9 @@ package home_work_2.loops;
 
 import java.util.Scanner;
 
+//1.6. Вывести таблицу умножения в консоль. В консоли должно получиться также как и на картинке
+// (динозаврика рисовать не надо): https://www.dropbox.com/s/ibakfuppvy2w32g/multiplication_table.jpeg?dl=0
+
 public class Comp1_6 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);

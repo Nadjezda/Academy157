@@ -1,22 +1,29 @@
 package home_work_2.arrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static home_work_2.utils.ArraysUtils.arrayRandom;
 
+//2.4 Задачи в презентации. На сайте есть пояснения по каждой из этих задач. Все задачи в одном классе,
+// в отдельных методах. Для получения массивов вызывать ранее созданный метод arrayRandom (ArraysUtils.arrayRandom(50, 100))
+//		2.4.1. Сумма четных положительных элементов массива
+//		2.4.2. Максимальный из элементов массива с четными индексами
+//		2.4.3. Элементы массива, которые меньше среднего арифметического
+//		2.4.4. Найти два наименьших (минимальных) элемента массива
+//		2.4.5. Сжать массив, удалив элементы, принадлежащие интервалу
+//		2.4.6. Сумма цифр массива
+
 public class Dz2_4 {
     public static void main(String[] args) {
-        int[] container = arrayRandom(8, 200);
+        int[] container = arrayRandom(50, 100);
         System.out.println(Arrays.toString(container));
-        int i = 0;
-        int sum = 0;
-        sumEven(container, i);
-        maxEven(container, i);
-        lessArithmetic(container, i);
-        twoMinElements(container, i);
-        reNull(container, i);
-        sumNumbersOfElements(container, i);
+
+        sumEven(container, 0);
+        maxEven(container, 0);
+        lessArithmetic(container, 0);
+        twoMinElements(container, 0);
+        reNull(container, 15, 38);
+        sumNumbersOfElements(container, 0);
     }
 
     //Сумма четных положительных элементов массива
@@ -43,11 +50,7 @@ public class Dz2_4 {
             if (i % 2 != 0) { // ищем нечетный индекс
                 continue;
             } else {
-                if (container[i] > maxNumber) { // ищем максимальный среди четных
-                    maxNumber = container[i];// если нашли сохраняем в переменную
-                } else {
-                    maxNumber = maxNumber;// не нашли переменная неизменна
-                }
+                 maxNumber = Math.max(container[i], maxNumber);// сравниваем и большую записываем в переменную max
             }
         }
         System.out.println("Максимальное: " + maxNumber);// распечатываем результат
@@ -89,18 +92,26 @@ public class Dz2_4 {
     }
 
     //Сжать массив, удалив элементы, принадлежащие интервалу
-    public static void reNull(int[] arr, int i) {
-        int a = 1; // переменная для нижней границы интервала
-        int b = 105; // переменная для верхней границы
+    public static void reNull(int[] arr, int start, int finish) {
 
-        System.out.println("интервал " + a + " < " + " > " + b);
-        for (i = 0; i < arr.length - 1; i++) { // перебираем массив
-            if (arr[i] >= a && arr[i] <= b) {
+        System.out.println(start + " < " + "интервал для обнуления" + " > " + finish);
+
+        for (int i = 0; i < arr.length - 1; i++) {// перебор массива для обнуления
+            if (arr[i] >= start && arr[i] <= finish) {
                 arr[i] = 0;
             }
         }
-        System.out.println(Arrays.toString(arr));// результат
+        for(int j = arr.length - 1; j >= 1; j--)
+            for (int i = 0; i < arr.length - 1; i++) {
+                if(arr[i] == 0){
+                    int tmp = arr[i];
+                    arr[i] =arr[i + 1];
+                    arr[i + 1] = tmp;
+                }
+            }
+        System.out.println(Arrays.toString(arr));
     }
+
 
 
     //Сумма цифр массива
