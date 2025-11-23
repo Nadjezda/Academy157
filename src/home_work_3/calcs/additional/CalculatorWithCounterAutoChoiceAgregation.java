@@ -21,125 +21,100 @@ import home_work_3.calcs.simple.CalculatorWithOperator;
 public class CalculatorWithCounterAutoChoiceAgregation {
 
     private long count;
+    private CalculatorWithOperator calcOper;
+    private CalculatorWithMathCopy calcMath;
+    private CalculatorWithMathExtends calcExtends;
 
     public long getCountOperation() {
         return count;
     }
 
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithOperator obj) {
-        obj = new CalculatorWithOperator();
+        this.calcOper = obj;
     }
 
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithMathCopy obj) {
-        obj = new CalculatorWithMathCopy();
+        this.calcMath = obj;
     }
 
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithMathExtends obj) {
-        obj= new CalculatorWithMathExtends();
+        this.calcExtends = obj;
     }
 
-    public double plus(CalculatorWithOperator calculator, double a, double b) {
+    public double plus(double a, double b) {
         count++;
-        return calculator.plus(a, b);
+        if (calcOper != null) {
+            return calcOper.plus(a, b);
+        } else if (calcMath != null) {
+            return calcMath.plus(a, b);
+        } else {
+            return calcExtends.plus(a, b);
+        }
     }
 
-    public double plus(CalculatorWithMathCopy calculator, double a, double b) {
+    public double minus (double a, double b) {
         count++;
-        return calculator.plus(a, b);
+        if(calcOper != null) {
+            return calcOper.minus(a, b);
+        } else if (calcMath != null) {
+            return calcMath.minus(a, b);
+        } else {
+            return calcExtends.minus(a, b);
+        }
     }
 
-    public double plus(CalculatorWithMathExtends calculator, double a, double b) {
+    public double dividing (double a, double b){
         count++;
-        return calculator.plus(a, b);
+        if(calcOper != null) {
+            return calcOper.dividing(a, b);
+        } else if (calcMath != null) {
+            return calcMath.dividing(a, b);
+        } else {
+            return calcExtends.dividing(a, b);
+        }
     }
 
-    public double minus (CalculatorWithOperator calculator, double a, double b){
+    public double multiplying (double a, double b){
         count++;
-        return calculator.minus(a, b);
+        if(calcOper != null) {
+            return calcOper.multiplying(a, b);
+        } else if (calcMath != null) {
+            return calcMath.multiplying(a, b);
+        } else {
+            return calcExtends.multiplying(a, b);
+        }
     }
 
-    public double minus (CalculatorWithMathCopy calculator, double a, double b){
+    public double power (double a, int b){
         count++;
-        return calculator.minus(a, b);
+        if(calcOper != null) {
+            return calcOper.power(a, b);
+        } else if (calcMath != null) {
+            return calcMath.power(a, b);
+        } else {
+            return calcExtends.power(a, b);
+        }
     }
 
-    public double minus (CalculatorWithMathExtends calculator, double a, double b){
+    public double absoluteNumber (double a){
         count++;
-        return calculator.minus(a, b);
+        if(calcOper != null) {
+            return calcOper.absoluteNumber(a);
+        } else if (calcMath != null) {
+            return calcMath.absoluteNumber(a);
+        } else {
+            return calcExtends.absoluteNumber(a);
+        }
     }
 
-    public double dividing (CalculatorWithOperator calculator, double a, double b){
+    public double squareRoot (int a){
         count++;
-        return calculator.dividing(a, b);
-    }
-
-    public double dividing (CalculatorWithMathCopy calculator, double a, double b){
-        count++;
-        return calculator.dividing(a, b);
-    }
-
-    public double dividing (CalculatorWithMathExtends calculator, double a, double b){
-        count++;
-        return calculator.dividing(a, b);
-    }
-
-    public double multiplying (CalculatorWithOperator calculator, double a, double b){
-        count++;
-        return calculator.multiplying(a, b);
-    }
-
-    public double multiplying (CalculatorWithMathCopy calculator, double a, double b){
-        count++;
-        return calculator.multiplying(a, b);
-    }
-
-    public double multiplying (CalculatorWithMathExtends calculator, double a, double b){
-        count++;
-        return calculator.multiplying(a, b);
-    }
-
-    public double power (CalculatorWithOperator calculator, double a, int b){
-        count++;
-        return calculator.power(a, b);
-    }
-
-    public double power (CalculatorWithMathCopy calculator, double a, int b){
-        count++;
-        return calculator.power(a, b);
-    }
-
-    public double power (CalculatorWithMathExtends calculator, double a, int b){
-        count++;
-        return calculator.power(a, b);
-    }
-
-    public double absoluteNumber (CalculatorWithOperator calculator, double a){
-        count++;
-        return calculator.absoluteNumber(a);
-    }
-
-    public double absoluteNumber (CalculatorWithMathCopy calculator, double a){
-        count++;
-        return calculator.absoluteNumber(a);
-    }
-
-    public double absoluteNumber (CalculatorWithMathExtends calculator, double a){
-        count++;
-        return calculator.absoluteNumber(a);
-    }
-
-    public double squareRoot (CalculatorWithOperator calculator, int a){
-        count++;
-        return calculator.squareRoot(a);
-    }
-
-    public double squareRoot (CalculatorWithMathCopy calculator, int a){
-        count++;
-        return calculator.squareRoot(a);
-    }
-
-    public double squareRoot (CalculatorWithMathExtends calculator, int a){
-        count++;
-        return calculator.squareRoot(a);
+        if(calcOper != null) {
+            return calcOper.squareRoot(a);
+        } else if (calcMath != null) {
+            return calcMath.squareRoot(a);
+        } else {
+            return calcExtends.squareRoot(a);
+        }
     }
 }
