@@ -5,11 +5,32 @@ package home_work_2.arrays.api;
 //		2.3.2. WhileOperation - во всех методах можно использовать только while
 //		2.3.3. ForOperation - во всех методах можно использовать только for
 //		2.3.4. ForEachOperation - во всех методах можно использовать только foreach
+
+/**
+ * Работа с элементами массива
+ */
+
 public interface IArraysOperation {
 
-
+    /**
+     * Вывод всех элементов массива в порядке ввода
+     * @param a массив
+     * @param b счетчик элементов
+     */
     void output(int[] a, int b);
+
+    /**
+     * Вывод каждого второго элемента массива по индексу
+     * @param a массив
+     * @param b счетчик элементов массива
+     */
     void everySecond(int[] a, int b);
+
+    /**
+     * Вывод элементов массива в обратном порядке
+     * @param a массив
+     * @param b счетчик элементов массива
+     */
     void reversArray(int[] a, int b);
 
     }
