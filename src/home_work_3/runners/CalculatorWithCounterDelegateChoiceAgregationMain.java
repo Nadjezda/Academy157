@@ -28,11 +28,9 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                         (new CalculatorWithOperator());
 
 
-        double result = calculatorDelegateOper.plus(new CalculatorWithOperator(),4.1,
-                (calculatorDelegateOper.plus(new CalculatorWithOperator(),
-                        calculatorDelegateOper.multiplying(new CalculatorWithOperator(), 15, 7),
-                        calculatorDelegateOper.power(new CalculatorWithOperator(),
-                        (calculatorDelegateOper.dividing(new CalculatorWithOperator(),28.0, 5.0)), 2))));
+        double result = calculatorDelegateOper.plus(4.1,
+                (calculatorDelegateOper.plus(calculatorDelegateOper.multiplying(15, 7),
+                        calculatorDelegateOper.power((calculatorDelegateOper.dividing(28.0, 5.0)), 2))));
         System.out.printf("%.2f", result);
         System.out.println();
         System.out.println(calculatorDelegateOper.getCountOperation());
@@ -42,11 +40,9 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                 new CalculatorWithCounterAutoChoiceAgregation
                         (new CalculatorWithMathCopy());
 
-        double result1 = calculatorDelegateOper1.plus(new CalculatorWithMathCopy(),4.1,
-                (calculatorDelegateOper1.plus(new CalculatorWithMathCopy(),
-                        calculatorDelegateOper1.multiplying(new CalculatorWithMathCopy(), 15, 7),
-                        calculatorDelegateOper1.power(new CalculatorWithMathCopy(),
-                        (calculatorDelegateOper1.dividing(new CalculatorWithMathCopy(),28.0, 5.0)), 2))));
+        double result1 = calculatorDelegateOper1.plus(4.1,
+                (calculatorDelegateOper1.plus(calculatorDelegateOper1.multiplying(15, 7),
+                        calculatorDelegateOper1.power((calculatorDelegateOper1.dividing(28.0, 5.0)), 2))));
         System.out.printf("%.2f", result1);
         System.out.println();
         System.out.println(calculatorDelegateOper1.getCountOperation());
@@ -57,11 +53,9 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                         (new CalculatorWithMathExtends());
 
 
-        double result2 = calculatorDelegateOper2.plus(new CalculatorWithMathExtends(),4.1,
-                (calculatorDelegateOper2.plus(new CalculatorWithMathExtends(),
-                        calculatorDelegateOper2.multiplying(new CalculatorWithMathExtends(), 15, 7),
-                        calculatorDelegateOper2.power(new CalculatorWithMathExtends(),
-                        (calculatorDelegateOper2.dividing(new CalculatorWithMathExtends(),28.0, 5.0)), 2))));
+        double result2 = calculatorDelegateOper2.plus(4.1,
+                (calculatorDelegateOper2.plus(calculatorDelegateOper2.multiplying(15, 7),
+                        calculatorDelegateOper2.power((calculatorDelegateOper2.dividing(28.0, 5.0)), 2))));
         System.out.printf("%.2f", result2);
         System.out.println();
         System.out.println(calculatorDelegateOper2.getCountOperation());
