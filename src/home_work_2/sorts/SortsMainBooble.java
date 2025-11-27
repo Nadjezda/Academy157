@@ -33,26 +33,26 @@ public class SortsMainBooble {
         int [] arr6 = ArraysUtils.arrayFromConsole();
 
         System.out.print("Массив до сортировки\n " + Arrays.toString(arr));
-        sort(arr,0);
+        sort(arr);
         System.out.print("Массив после сортировки\n " + Arrays.toString(arr));
         System.out.println();
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr1));
-        sort(arr1,0);
+        sort(arr1);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr1));
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr2));
-        sort(arr2,0);
+        sort(arr2);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr2));
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr3));
-        sort(arr3,0);
+        sort(arr3);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr3));
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr4));
-        sort(arr4,0);
+        sort(arr4);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr4));
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr5));
-        sort(arr5,0);
+        sort(arr5);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr5));
         System.out.println("Массив до сортировки\n" + Arrays.toString(arr6));
-        sort(arr6,0);
+        sort(arr6);
         System.out.println("Массив после сортировки\n" + Arrays.toString(arr6));
     }
 }

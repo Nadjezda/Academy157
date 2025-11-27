@@ -7,9 +7,9 @@ package home_work_2.sorts;
 //		при помощи алгоритма шейкерная сортировка. Описание алгоритма: https://prog-cpp.ru/sort-shaker/
 
 public class SortsUtils {
-    public static int[] sort(int[] arr, int i) {//пузырьковая сортиторка
+    public static void sort(int[] arr) {//пузырьковая сортиторка
         for (int j = arr.length - 1; j >= 1; j--) {
-            for (i = 0; i < arr.length - 1; i++) {
+            for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int tmp = arr[i];
                     arr[i] = arr[i + 1];
@@ -17,11 +17,11 @@ public class SortsUtils {
                 }
             }
         }
-        return arr;
     }
 
 
-    public static int[] shake(int[] arr) {// шейкерная сортировка
+
+    public static void shake(int[] arr) {// шейкерная сортировка
         int left = 0;
         int right = arr.length - 1;
         int isSorted = 1;
@@ -36,7 +36,7 @@ public class SortsUtils {
                 }
             }
             right = isSorted;
-            for (int i = right-1; i >= left; i--) {
+            for (int i = right - 1; i >= left; i--) {
                 if (arr[i] > arr[i + 1]) {
                     int tmp = arr[i];
                     arr[i] = arr[i + 1];
@@ -45,7 +45,6 @@ public class SortsUtils {
                 }
             }
             left = isSorted + 1;
-            }
-        return arr;
+        }
     }
 }
