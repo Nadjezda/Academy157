@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -15,20 +15,21 @@ public class Branching4_4 {
         System.out.println("Your choice is: " + choice);
 
         System.out.println("Enter the quantity you want to convert: ");//выбираем количество для конвертации
-        double quantity = console.nextFloat();
+        double quantity = console.nextDouble();
         System.out.println("Your quantity is: " + quantity);
         console.close();
 
+        convert(choice, quantity);
+    }
 
-        switch (choice) {
+    public static double convert(int a, double b){
+        switch (a) {
             case 1:
-                System.out.println(quantity + "байт = " + (quantity / SCALE) + "KБ");
-                break;
+                return b / SCALE;
             case 2:
-                System.out.println(quantity + "KБ = " + (quantity * SCALE) + "байт");
-                    break;
+                return b * SCALE;
             default:
-                System.out.println("Вы ввели странные данные");
+                return 0;
                 }
             }
         }

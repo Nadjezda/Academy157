@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -11,12 +11,16 @@ public class Branching4_5 {
         int input = console.nextInt();
         console.close();
 
-        if ((input >= 65 && input <= 90 ) || (input >= 97 && input <= 122)) {//  в десятичной большие латинские буквы от 65 до 90,
-            // маленькие от 97 до 122
-            System.out.println("It is a letter");
-        }else{
-            System.out.println("It is another simbol");
-        }
+        ifLetter(input) ;
+    }
 
+    public static int ifLetter(int a) {
+        if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122)) {//  в десятичной большие латинские буквы от 65 до 90,  а маленькие от 97 до 122
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
+
+

@@ -12,9 +12,17 @@ public static void main(String[] args) {
     System.out.println(createPhoneNumber(new int []{4,8,9,5,7,8,6,4,2,1}));
 
 }
-public static String createPhoneNumber(int [] a) {
-    String transfer =  String.format("(%s%s%s) %s%s%s-%s%s%s%s", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9]);
-    return transfer;
+
+    /**
+     * Изменение формата введенного номера телефона
+     * @param a номер из 10 цифр
+     * @return номер из 10 цифр в формате (XXX) XXX-XXXX.
+     */
+    public static String createPhoneNumber(int [] a) {
+        if(a.length > 10 || a.length < 9) {
+            return "ERROR";
+        }
+    return String.format("(%s%s%s) %s%s%s-%s%s%s%s", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9]);
     }
 }
 

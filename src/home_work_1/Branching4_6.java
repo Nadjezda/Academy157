@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -10,11 +10,14 @@ public class Branching4_6 {
         int year = console.nextInt();
         System.out.println("Ваш год " + year);
         console.close();
+        leapYear(year);
+    }
 
+public static int leapYear(int year){
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
-            System.out.println("Год високосный");
+            return 1;
         }else {
-            System.out.println("Год не високосный");
+            return 0;
         }
     }
 }

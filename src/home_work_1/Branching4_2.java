@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -18,14 +18,17 @@ public class Branching4_2 {
         if (number3 == number2 && number2 == number1) {
             System.out.println("We haven't middle number");
         } else {
-            int max = Math.max(number1, number2);
-            int max1 = Math.max(number2, number3);
-            if (max1 == max) {
-                System.out.println("The middle is: " + Math.max(number1, number3));
-            } else {
-                System.out.println("The middle is: " + Math.min(max, max1));
-            }
+            System.out.println("Middle is: " + middleNumber(number1, number2, number3));
         }
+    }
+public static int middleNumber(int a, int b, int c){
+    int max = Math.max(a, b);
+    int max1 = Math.max(b, c);
+    if (max1 == max) {
+        return Math.max(a, c);
+    } else {
+        return Math.min(max, max1);
+    }
     }
 }
 

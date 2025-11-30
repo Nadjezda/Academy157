@@ -1,10 +1,12 @@
-package homeWork1;
+package home_work_1;
 
+
+import home_work_1.api.ICommunicationPrinter;
 
 import java.util.Scanner;
 
-public class HomeIf6_3 {
-    public static void main(String[] args) {
+public class HomeIf6_3 implements ICommunicationPrinter {
+
         //Запросить у пользователя через консоль его имя. В данном задании у вас должно получиться 3 класса.
         //	Что в итоге надо сделать (общее условие):
         //		1. Если имя будет равно имени "Вася" тогда в консоль должно вывести сообщение "Привет!" на одной строке, а на второй "Я тебя так долго ждал".
@@ -12,19 +14,21 @@ public class HomeIf6_3 {
         //		3. В случае если это будет другое имя то вывести сообщение "Добрый день, а вы кто?".
         //6.3 Написать в отдельном классе main метод и в нём код который будет выполнять общее условие при помощи switch
         //	ВНИМАНИЕ! В примерах c if для сравнения имён использовать код вида Objects.equals("Имя1", "Имя2").
-        Scanner console = new Scanner(System.in);
-        System.out.println("Введите Ваше имя: ");
-        String input = console.nextLine();
-        console.close();
 
-        switch (input) {
+    /**
+     * Получение приветсвенного сообщения
+     * @param name имя
+     * @return сообщение
+     * если передадим null получим ошибку NullPointerException
+     */
+    public String welcome(String name){
+            switch (name) {
             case "Вася":
-                System.out.print("Привет.");
+                return "Привет.\nЯ тебя так долго ждал.";
             case "Анастасия":
-                System.out.println("Я тебя так долго ждал.");
-                break;
+                return "\nЯ тебя так долго ждал.";
             default:
-                System.out.println("Добрый день,а Вы кто?");
+                return "Добрый день,а Вы кто?";
         }
     }
 }

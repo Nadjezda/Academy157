@@ -1,9 +1,11 @@
-package homeWork1;
+package home_work_1;
+
+import home_work_1.api.ICommunicationPrinter;
 
 import java.util.Objects;
 import java.util.Scanner;
 
-public class HomeIf6_2 {
+public class HomeIf6_2 implements ICommunicationPrinter {
     //Запросить у пользователя через консоль его имя. В данном задании у вас должно получиться 3 класса.
     //	Что в итоге надо сделать (общее условие):
     //		1. Если имя будет равно имени "Вася" тогда в консоль должно вывести сообщение "Привет!" на одной строке,
@@ -12,18 +14,14 @@ public class HomeIf6_2 {
     //		3. В случае если это будет другое имя то вывести сообщение "Добрый день, а вы кто?".
     // 6.2 Написать в отдельном классе main метод и в нём код который будет выполнять общее условие при помощи if else if
     //ВНИМАНИЕ! В примерах c if для сравнения имён использовать код вида Objects.equals("Имя1", "Имя2").
-    public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("Введите Ваше имя: ");
-        String input = console.nextLine();
-        console.close();
 
-        if (Objects.equals(input, "Вася")) {
-            System.out.print("Привет. \nЯ тебя так долго ждал.");
-        } else if (Objects.equals(input, "Анастасия")) {
-            System.out.println("Я тебя так долго ждал.");
+    public String welcome(String name){
+        if (Objects.equals(name, "Вася")) {
+            return "Привет. \nЯ тебя так долго ждал.";
+        } else if (Objects.equals(name, "Анастасия")) {
+            return "\nЯ тебя так долго ждал.";
         } else {
-            System.out.println("Добрый день,а Вы кто?");
+            return "Добрый день,а Вы кто?";
             }
         }
     }

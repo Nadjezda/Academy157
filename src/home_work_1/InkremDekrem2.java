@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.beans.PropertyEditorSupport;
 import java.util.Objects;

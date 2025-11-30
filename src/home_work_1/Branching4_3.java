@@ -1,4 +1,4 @@
-package home_work1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -8,23 +8,28 @@ public class Branching4_3 {
         // Вывести на экран сообщение об этом, результат и остаток если он есть.
         Scanner console = new Scanner(System.in);
         System.out.println("Введите число которое будем делить: ");
-        int delimoye = console.nextInt();
+        int dividend = console.nextInt();
         System.out.println("Введите число на которое будем делить: ");
-        int delitel = console.nextInt();
-        System.out.println("Your numbers are: " + delimoye + "," + delitel);
+        int divisor = console.nextInt();
+        System.out.println("Your numbers are: " + dividend + "," + divisor);
         console.close();
-        int answer = delimoye / delitel;
-        int rest = delimoye % delitel;
-
-        if (delitel == 0) {
+        if (divisor == 0) {
             System.out.println("На ноль делить нельзя");
-        }else if (delimoye == 0) {
-            System.out.println("Результат деления равен нулю");
-        }else if (rest == 0) {
-            System.out.println("Разделили без остатка, результат: " + answer);
+        }
+        howDividedNumbers(dividend, divisor);
+    }
+
+    public static int howDividedNumbers(int a, int b){
+        if (a == 0) {
+            System.out.println("Результат ноль");
+            return 0;
+        }else if (a % b == 0) {
+            System.out.println("Результат: " + a / b);
+            return a / b;
         }else{
-            System.out.println("Разделили с остатком = " + rest + " и результатом = " + answer);
-             }
+            System.out.println("Результат: " + a / b + " и остаток: " + a % b);
+            return a % b;
+        }
     }
 }
 

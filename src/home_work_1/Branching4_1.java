@@ -1,4 +1,4 @@
-package homeWork1;
+package home_work_1;
 
 import java.util.Scanner;
 
@@ -7,20 +7,25 @@ public class Branching4_1 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите первое число и обязательно четное: ");
-        int a = console.nextInt();
-        System.out.println("Ваше число: " + a);
+        int evenNumber = console.nextInt();
+        System.out.println("Ваше число: " + evenNumber);
         System.out.println("Введите второе число ");
-        int b = console.nextInt();
-        System.out.println("Ваше число: " + b);
+        int secondNumber = console.nextInt();
+        System.out.println("Ваше число: " + secondNumber);
         console.close();
-
-        if (a % 2 != 0) {
+        if (evenNumber % 2 != 0) {
             System.out.println("Error");
-        }else if (b % 2 == 0) {
+        } else if (oddNumber(secondNumber) == 0) {
             System.out.println("Нет нечетного числа");
-        }else if (b % 2 != 0){
-            System.out.println("Ваше число нечетное: " + b);
+        } else {
+            System.out.println("Нечетное число" + secondNumber);
         }
+    }
+    public static int oddNumber( int b) {
+        if (b % 2 != 0) {
+            return b;
+        }
+        return 0;
     }
 }
 
