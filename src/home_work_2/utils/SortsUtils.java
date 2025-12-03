@@ -6,8 +6,10 @@ package home_work_2.sorts;
 //		4.1.2. Написать метод public static void shake(int[] arr). Данный метод будет сортировать переданный ему массив
 //		при помощи алгоритма шейкерная сортировка. Описание алгоритма: https://prog-cpp.ru/sort-shaker/
 
+import java.util.Arrays;
+
 public class SortsUtils {
-    public static void sort(int[] arr) {//пузырьковая сортиторка
+    public static String sort(int[] arr) {//пузырьковая сортиторка
         for (int j = arr.length - 1; j >= 1; j--) {
             for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
@@ -17,11 +19,12 @@ public class SortsUtils {
                 }
             }
         }
+        return Arrays.toString(arr);
     }
 
 
 
-    public static void shake(int[] arr) {// шейкерная сортировка
+    public static String shake(int[] arr) {// шейкерная сортировка
         int left = 0;
         int right = arr.length - 1;
         int isSorted = 1;
@@ -46,5 +49,6 @@ public class SortsUtils {
             }
             left = isSorted + 1;
         }
+        return Arrays.toString(arr);
     }
 }

@@ -1,7 +1,4 @@
-package home_work_1;
-
-import java.beans.PropertyEditorSupport;
-import java.util.Objects;
+package home_work_1.runners;
 
 public class InkremDekrem2 {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_4 {
+public class Branching4Part4 {
     public final static int SCALE = 1024;
     public static void main(String[] args) {
         //4.4 Перевести байты в килобайты или наоборот. Перевести число введенное пользователем в байти или килобайты

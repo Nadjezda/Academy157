@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_5 {
+public class Branching4Part5 {
     //4.5 Буква или иной символ. Вводиться целое число, обозначающее код символа по ASCII.
     // Определить это код английской буквы или иной символ.
     public static void main(String[] args) {

@@ -1,7 +1,4 @@
-package home_work_1;
-
-
-import java.util.Arrays;
+package home_work_1.runners;
 
 
 public class ToBinaryString {

@@ -13,7 +13,7 @@ public class Vail1_1 {
         long enterNumber = Integer.parseInt(args[0]);
 
         long composition = 1; // для результата умножения
-        if (enterNumber >= 21 || enterNumber <= 0) { // ограничение для избежаничя ошибок
+        if (enterNumber >= 20 || enterNumber <= 0) { // ограничение для избежаничя ошибок
             System.out.println("Введите число от 1 до 21");
         } else {
             for (int i = 1; i <= enterNumber; i++) { // запускаем цикл для умножения и вывода в консоль

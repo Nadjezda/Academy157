@@ -4,7 +4,7 @@ import home_work_2.utils.ArraysUtils;
 
 import java.util.Arrays;
 
-import static home_work_2.sorts.SortsUtils.sort;
+import static home_work_2.utils.SortsUtils.sort;
 import static home_work_2.utils.ArraysUtils.arrayRandom;
 
 //4.2. Создать класс SortsMain. Все проверки пишутся в main.

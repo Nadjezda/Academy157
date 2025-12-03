@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_2 {
+public class Branching4Part2 {
     public static void main(String[] args) {
         //4.2 Среди трёх чисел найти среднее, которое больше минимального, но меньше максимального
         Scanner console = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package home_work_1;
+package home_work_1.runners;
 
 public class ForMath3 {
     public static void main(String[] args) {

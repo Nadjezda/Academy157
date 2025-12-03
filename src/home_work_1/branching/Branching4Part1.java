@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_1 {
+public class Branching4Part1 {
     //4.1 Определить нечётное число: из двух случайных чисел, одно из которых четное определить и вывести на экран нечетное число
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);

@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_3 {
+public class Branching4Part3 {
     public static void main(String[] args) {
         //4.3 Проверка делимости одного числа на другое. Вводится два числа, проверить делится ли первое на второе.
         // Вывести на экран сообщение об этом, результат и остаток если он есть.

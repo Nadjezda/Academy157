@@ -1,4 +1,4 @@
-package home_work_1;
+package home_work_1.runners;
 
 public class PhoneNumber {
 //    Создать СТАТИЧЕСКИЙ метод createPhoneNumber рядом с методом main, данный метод будет принимает один параметр

@@ -1,4 +1,4 @@
-package home_work_1;
+package home_work_1.runners;
 
 import java.util.Objects;
 import java.util.Scanner;

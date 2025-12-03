@@ -1,8 +1,8 @@
-package home_work_1;
+package home_work_1.branching;
 
 import java.util.Scanner;
 
-public class Branching4_6 {
+public class Branching4Part6 {
     public static void main(String[] args) {
         //4.6 Определить високосный год или нет
         Scanner console = new Scanner(System.in);
