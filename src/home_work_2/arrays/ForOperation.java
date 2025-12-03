@@ -7,33 +7,46 @@ package home_work_2.arrays;
 
 import home_work_2.arrays.api.IArraysOperation;
 
+import java.util.Arrays;
+
 public class ForOperation implements IArraysOperation {
 
     // вывод массива в консоль
-    public  void output(int[] container, int i) {
+    @Override
+    public  String output(int[] container) {
 
-        for (i = 0; i < container.length; i++) {
+        for (int i = 0; i < container.length; i++) {
             System.out.print(container[i] + " ");
         }
         System.out.println();
+        return Arrays.toString(container);
     }
 
     //вывод каждого второго элемента в консоль
-    public void everySecond(int[] container, int i) {
-
-        for (i = 1; i < container.length; i += 2) {
+    @Override
+    public String everySecond(int[] container) {
+        int[] everySecondContainer = new int [container.length / 2 + (container.length % 2)];
+        int index = 0;
+        for (int i = 1; i < container.length; i += 2) {
             System.out.print(container[i] + " ");
+            everySecondContainer[index] = container[i];
+            index++;
         }
         System.out.println();
+        return Arrays.toString(everySecondContainer);
     }
 
     // вывод элементов массива в обратном порядке
-    public  void reversArray(int[] container, int i) {
-
-        for (i = container.length - 1; i >= 0; i--) {
-
+    @Override
+    public  String reversArray(int[] container) {
+        int[] reversContainer = new int [container.length];
+        int index = 0;
+        for (int i = container.length - 1; i >= 0; i--) {
+            reversContainer[index] = container[i];
             System.out.print(container[i] + " ");
+            index++;
         }
         System.out.println();
+        return Arrays.toString(reversContainer);
     }
 }

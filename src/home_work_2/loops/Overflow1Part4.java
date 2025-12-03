@@ -8,7 +8,7 @@ package home_work_2.loops;
 //    	1.4.3. -19
 //    	1.4.4. Да и вообще на любое целочисленное
 
-public class Overflow1_4 {
+public class Overflow1Part4 {
     public static void main(String[] args) {
         long numberForOverflow = 1;
         int firstNumberToMultiply = 3;

@@ -15,22 +15,19 @@ public interface IArraysOperation {
     /**
      * Вывод всех элементов массива в порядке ввода
      * @param a массив
-     * @param b счетчик элементов
      */
-    void output(int[] a, int b);
+    String output(int[] a);
 
     /**
      * Вывод каждого второго элемента массива по индексу
      * @param a массив
-     * @param b счетчик элементов массива
      */
-    void everySecond(int[] a, int b);
+    String everySecond(int[] a);
 
     /**
      * Вывод элементов массива в обратном порядке
      * @param a массив
-     * @param b счетчик элементов массива
      */
-    void reversArray(int[] a, int b);
+    String reversArray(int[] a);
 
     }

@@ -3,7 +3,7 @@ package home_work_2.loops;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Hw1_5 {
+public class Hw1Part5 {
 //    1.5. Задачи в презентации. На сайте есть пояснения по каждой из этих задач. Все задачи в одном классе, в отдельных методах.
 //    	1.5.1. Найти наибольшую цифру натурального числа
 //    	1.5.2. Вероятность четных случайных чисел
@@ -12,16 +12,16 @@ public class Hw1_5 {
 //    	1.5.5. Вывести ряд чисел в диапазоне с шагом
 //    	1.5.6. Переворот числа
     public static void main(String[] args) {
-        max();
-        probability();
-        evenAndOdd();
-        fibonachi();
+//        max();
+//        probability();
+//        evenAndOdd();
+//        fibonachi();
         step();
         revers();
     }
    public static void max() {
        Scanner console = new Scanner(System.in);
-       System.out.println("Input the number");
+       System.out.println("Input the number for max");
        long input = console.nextLong();
        long maxNumber = 0;// для сравнения и поиска максимального
 
@@ -57,7 +57,7 @@ public class Hw1_5 {
         } //Вероятность четных случайных чисел  1.5.2
    public static void evenAndOdd() {
        Scanner console = new Scanner(System.in); // для ввода информации пользователем
-       System.out.println("Input the number");
+       System.out.println("Input the number for even and odd");
        long input = console.nextLong();
        long evenCount = 0; // для подсчета четный цифр
        long oddCount = 0; // для подсчета не четный цифр
@@ -77,7 +77,7 @@ public class Hw1_5 {
    } //Посчитать четные и нечетные цифры числа 1.5.3
    public static void fibonachi() {
        Scanner console = new Scanner(System.in); // для ввода информации
-       System.out.println("Enter the number");
+       System.out.println("Enter the number for row Fibonachi");
        int number = console.nextInt();
 
        int firstFib = 0;// первое число ряда
@@ -88,11 +88,17 @@ public class Hw1_5 {
        }else if(number == 1){
            System.out.println("The " + number + "number Fibonacci is 1");
        }else {
-           for (int i = 0; i < number; i++) { // цикл для  вывода ряда
-               int tmp = firstFib + secondFib;
-               System.out.print(tmp + " ");
-               firstFib = secondFib;
-               secondFib = tmp;
+           for (int i = 0; i < number; i++) {
+               if ((firstFib + secondFib) > 0) {
+                   // цикл для  вывода ряда
+                   int tmp = firstFib + secondFib;
+                   System.out.print(tmp + " ");
+                   firstFib = secondFib;
+                   secondFib = tmp;
+               } else {
+                   System.out.println("\nПереполнение на " + (i + 2) + "ой итерации");
+                   break;
+               }
            }
            System.out.println();
        }
@@ -104,7 +110,7 @@ public class Hw1_5 {
        System.out.println("Введите максимальное натуральное число");
        long maxNumber = console.nextLong();
        System.out.println("Введите шаг");
-       double step = console.nextDouble();
+       long step = console.nextLong();
 
        if (minNumber <= 0 |  step <= 0) { //проверка на ошибки ввода данных
            System.out.println("Введите корректные данные");
@@ -112,9 +118,9 @@ public class Hw1_5 {
            System.out.print(minNumber + " ");// для начала вывода данных
 
            double tmp = Math.ceil(maxNumber / step);
-           for (int i = 1; i < tmp; i++) {// цикл для вывода цифр с шагом
-               long tmp1 = (long) (minNumber + step);// в данном случае точность данных не имеет значения
-               if ((tmp1) <= maxNumber) {
+           for (int i = 1; i <= tmp; i++) {// цикл для вывода цифр с шагом
+               long tmp1 = minNumber + step;
+               if (tmp1 <= maxNumber) {
                    System.out.print((tmp1) + " ");
                    minNumber = tmp1;
                }
@@ -124,7 +130,7 @@ public class Hw1_5 {
    }//Вывести ряд чисел в диапазоне с шагом 1.5.5
    public static void revers() {
        Scanner console = new Scanner(System.in); // для ввода информации
-       System.out.println("Enter the number");
+       System.out.println("Enter the number for revers");
        long input = console.nextLong();
        long reversEnterNumber = 0; // для хранения перевернутого числа
 

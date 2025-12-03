@@ -1,4 +1,4 @@
-package home_work_2.sorts;
+package home_work_2.utils;
 
 //4.1. Создать класс SortsUtils. В этом классе не должно быть main метода. В этом классе написать следующие методы:
 //		4.1.1. Написать метод public static void sort(int[] arr). Данный метод будет сортировать переданный ему массив

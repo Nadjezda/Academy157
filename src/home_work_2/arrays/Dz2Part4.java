@@ -13,7 +13,7 @@ import static home_work_2.utils.ArraysUtils.arrayRandom;
 //		2.4.5. Сжать массив, удалив элементы, принадлежащие интервалу
 //		2.4.6. Сумма цифр массива
 
-public class Dz2_4 {
+public class Dz2Part4 {
     public static void main(String[] args) {
         int[] container = arrayRandom(50, 100);
         System.out.println(Arrays.toString(container));

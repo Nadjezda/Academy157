@@ -22,7 +22,7 @@ import static home_work_2.utils.ArraysUtils.arrayRandom;
 //		4.2.3 После теста с рандомно заполненным массивом пишем тест с массивом полученным через консоль.
 //		Вызывая ранее созданный метод arrayFromConsole (ArraysUtils.arrayFromConsole()) получить массив. Отсортировать.
 
-public class SortsMainBooble {
+public class SortsMainBubble {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
         int[] arr1 = {1,1,1,1};

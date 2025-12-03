@@ -17,26 +17,26 @@ public class ArraysOperationMain {
         int [] container = ArraysUtils.arrayRandom(10,100);
         System.out.println(" do while ");
         DoWhileOperation doshka = new DoWhileOperation();
-        doshka.output(container, 0);
-        doshka.everySecond(container, 0);
-        doshka.reversArray(container, 0);
+        doshka.output(container);
+        doshka.everySecond(container);
+        doshka.reversArray(container);
 
         System.out.println(" while ");
         WhileOperation whilushka = new WhileOperation();
-        whilushka.output(container, 0);
-        whilushka.everySecond(container, 0);
-        whilushka.reversArray(container, 0);
+        whilushka.output(container);
+        whilushka.everySecond(container);
+        whilushka.reversArray(container);
 
         System.out.println(" for ");
         ForOperation forushka = new ForOperation();
-        forushka.output(container, 0);
-        forushka.everySecond(container, 0);
-        forushka.reversArray(container, 0);
+        forushka.output(container);
+        forushka.everySecond(container);
+        forushka.reversArray(container);
 
         System.out.println(" foreach ");
         ForEachOperation forechka = new ForEachOperation();
-        forechka.output(container, 0);
-        forechka.everySecond(container, 0);
-        forechka.reversArray(container, 0);
+        forechka.output(container);
+        forechka.everySecond(container);
+        forechka.reversArray(container);
     }
 }

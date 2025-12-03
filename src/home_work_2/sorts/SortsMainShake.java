@@ -4,7 +4,7 @@ import home_work_2.utils.ArraysUtils;
 
 import java.util.Arrays;
 
-import static home_work_2.sorts.SortsUtils.shake;
+import static home_work_2.utils.SortsUtils.shake;
 
 import static home_work_2.utils.ArraysUtils.arrayRandom;
 
