@@ -66,12 +66,4 @@ public interface ICalculator {
      */
     double squareRoot (int x);
 
-    /**
-     * Подсчет использования калькулятора
-     * @return количество использований
-     */
-    default long getCount(){
-        return getCount();
-    }
-
 }

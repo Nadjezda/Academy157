@@ -29,6 +29,6 @@ public class CalculatorDecoratorMain {
 
         System.out.printf("%.2f", result);
         System.out.println();
-        System.out.println(calc.getCount());
+        System.out.println(((CalculatorWithCounterAutoDecorator)calc).getCount());
     }
 }

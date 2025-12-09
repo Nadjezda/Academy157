@@ -27,11 +27,11 @@ public class CalculatorWithMemoryMain {
         CalculatorWithMemory calculatorMemory = new CalculatorWithMemory(new CalculatorWithMathExtends());
 
         calculatorMemory.dividing(28.0, 5);
-        calculatorMemory.save(calculatorMemory.dividing(28.0, 5));
+        calculatorMemory.save();
         calculatorMemory.power(calculatorMemory.load(), 2);
-        calculatorMemory.save(calculatorMemory.power(calculatorMemory.load(), 2));
+        calculatorMemory.save();
         calculatorMemory.plus(4.1, calculatorMemory.load());
-        calculatorMemory.save(calculatorMemory.plus(4.1, calculatorMemory.load()));
+        calculatorMemory.save();
         calculatorMemory.plus(calculatorMemory.load(),
                 (calculatorMemory.multiplying(15, 7)));
         System.out.printf("%.2fn", calculatorMemory.load());
