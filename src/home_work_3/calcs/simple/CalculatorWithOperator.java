@@ -45,17 +45,26 @@ public class CalculatorWithOperator implements ICalculator {
             return a;
         }
     }
+
+    /**
+     * Meтод высчитывает квадратный корень из числа
+     * @param a число
+     * @return квадратный корень числа
+     * если в метод передать число < либо = нулю, получим бесконечный цикл.
+     */
     public double squareRoot(int a) {
+        if(a <= 0){
+            return 0;
+        }
         double tmp;
-        double approxiInitial = a / 2;
+        double approxiInitial = 1.0 * a / 2;
         do {
             tmp = approxiInitial;
             approxiInitial = (tmp + (a / tmp)) / 2;
-        } while ((tmp - approxiInitial) != 0);
+        } while ((tmp - approxiInitial) != 0.0);
         return approxiInitial;
     }
-    public int remainderOfDivision (int a, int b){
-    int result = a % b;
-    return result;
+    public int remainderOfDividing (int a, int b){
+        return  a % b;
 }
 }
