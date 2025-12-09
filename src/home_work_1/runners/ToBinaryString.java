@@ -44,7 +44,7 @@ public class ToBinaryString {
         System.out.println("- двоичное число ");
     }
 
-    public static int[] invertNumber(int arr[]) {
+    public static int[] invertNumber(int[]arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 arr[i] = 1;
@@ -55,17 +55,13 @@ public class ToBinaryString {
             return arr;
         }
 
-    public static int[] negativeBinaryNumber(int array[])  {
-        for (int i = array.length-1; i >= 0; i--) {
-            if (array[i] == 0) {
-                array[i] = 1;
-                break;
+    public static int[] negativeBinaryNumber(int []array)  {
+            if (array[array.length-1] == 0) {
+                array[array.length-1] = 1;
             } else {
-                array[i - 1] = 1;
-                array[i] = 0;
-                break;
+                array[array.length-2] = 1;
+                array[array.length-1] = 0;
             }
-        }
             return array;
     }
 
