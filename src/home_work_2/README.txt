@@ -29,4 +29,4 @@
 
 7. пакет arrays файл Dz7 и пакет tests.arrays файл Dz7Test.
 
-8. пакет tests.ыщкеы файл SortUtilsTest.
+8. пакет tests.sorts файл SortUtilsTest.

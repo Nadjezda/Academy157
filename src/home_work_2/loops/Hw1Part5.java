@@ -12,10 +12,10 @@ public class Hw1Part5 {
 //    	1.5.5. Вывести ряд чисел в диапазоне с шагом
 //    	1.5.6. Переворот числа
     public static void main(String[] args) {
-//        max();
-//        probability();
-//        evenAndOdd();
-//        fibonachi();
+        max();
+        probability();
+        evenAndOdd();
+        fibonachi();
         step();
         revers();
     }
@@ -29,7 +29,7 @@ public class Hw1Part5 {
            System.out.println("Error");
        } else {
            while (input % 10 != 0) {// для поиска максимальной цифры в числе
-               long result = 1; // временная переменная
+               long result; // временная переменная
                result = input % 10;
                maxNumber = Math.max(result, maxNumber);
                input = input / 10;
@@ -63,7 +63,7 @@ public class Hw1Part5 {
        long oddCount = 0; // для подсчета не четный цифр
 
        while (input > 0) {
-           long result = 1; // временная переменная
+           long result; // временная переменная
            result = input % 10; // делим на цифры число
              if(result % 2 == 0) { // проверяем на четность
                  evenCount++;
@@ -117,7 +117,7 @@ public class Hw1Part5 {
        } else {
            System.out.print(minNumber + " ");// для начала вывода данных
 
-           double tmp = Math.ceil(maxNumber / step);
+           double tmp = Math.ceil(1.0 * maxNumber / step);
            for (int i = 1; i <= tmp; i++) {// цикл для вывода цифр с шагом
                long tmp1 = minNumber + step;
                if (tmp1 <= maxNumber) {

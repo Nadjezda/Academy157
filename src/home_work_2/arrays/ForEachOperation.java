@@ -41,10 +41,10 @@ public class ForEachOperation implements IArraysOperation {
     // вывод элементов массива в обратном порядке
     @Override
      public String reversArray (int[] container){
-        int i = container.length - 1;
+
          int [] reversArray = new int [container.length];
 
-         for(i = container.length - 1; i >= 0; i--){
+         for(int i = container.length - 1; i >= 0; i--){
              reversArray[(container.length - 1) - i] = container[i];}
              for (int elements : reversArray) {
                  System.out.print(elements + " ");

@@ -1,8 +1,6 @@
 package home_work_2.loops;
 
 
-import java.util.Arrays;
-
 //1.4.* Умножать число long a = 1; пока не произойдёт переполнение. В конце в консоль вывести сообщение
 // со значением до переполнения и после переполнения. Умножать на:
 //    	1.4.1. 3
@@ -29,7 +27,7 @@ public class Overflow5Part4 {
         System.out.println("----------Умножение на -19----------");
         overflow(results, 1, -19);
         overflow(results, 1, 0);
-        overflow(results, -15l, 4);
+        overflow(results, -15L, 4);
         overflow(results, 0,158);
 
 

@@ -27,7 +27,7 @@ public class SortsUtils {
     public static String shake(int[] arr) {// шейкерная сортировка
         int left = 0;
         int right = arr.length - 1;
-        int isSorted = 1;
+        int isSorted;
         while (left < right) {
             isSorted = 0;
             for (int i = left; i < right; i++) {

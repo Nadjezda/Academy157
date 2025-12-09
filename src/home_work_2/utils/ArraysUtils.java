@@ -1,7 +1,6 @@
 package home_work_2.utils;
-import java.util.Arrays;
+
 import java.util.Scanner;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 //2.1. Создать класс ArraysUtils. В этом классе не должно быть main метода.
 // В этом классе написать следующие методы:
