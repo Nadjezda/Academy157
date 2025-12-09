@@ -13,6 +13,16 @@ public class CalculatorWithMemoryDecorator implements ICalculator {
 
 
     private ICalculator Calculator;
+    private double result;
+
+    public double load() {
+        return result;
+    }
+
+    public void save(double result){
+        this.result = result;
+    }
+
     public ICalculator getCalculator(){
         return Calculator;
     }

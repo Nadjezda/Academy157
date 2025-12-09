@@ -23,7 +23,7 @@ package home_work_3.calcs.additional;
 import home_work_3.calcs.api.ICalculator;
 
 
-public class CalculatorWithMemory implements ICalculator{
+public class CalculatorWithMemory {
     private ICalculator obj;
     private double result;
 
@@ -39,37 +39,30 @@ public class CalculatorWithMemory implements ICalculator{
         this.obj = obj;
     }
 
-    @Override
     public double plus(double x, double y) {
         return result = this.obj.plus(x, y);
     }
 
-    @Override
     public double minus(double x, double y) {
         return result = this.obj.minus(x, y);
     }
 
-    @Override
     public double dividing(double x, double y) {
         return result = this.obj.dividing(x, y);
     }
 
-    @Override
     public double multiplying(double x, double y) {
         return result = this.obj.multiplying(x, y);
     }
 
-    @Override
     public double power(double x, int y) {
         return result = this.obj.power(x, y);
     }
 
-    @Override
     public double absoluteNumber(double x) {
         return result = this.obj.absoluteNumber(x);
     }
 
-    @Override
     public double squareRoot(int x) {
         return result = this.obj.squareRoot(x);
     }
