@@ -34,4 +34,7 @@
 	12.8 package home_work_3.runners CalculatorWithMemoryMain
 13*. Создать класс CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator
 	13.1 - 	13.4 package home_work_3.calcs.additional CalculatorWithCounterAutoDecorator и CalculatorWithMemoryDecorator
-	13.5 - 13.6 package home_work_3.runners CalculatorDecoratorMain
+	13.5 - 13.7 package home_work_3.runners CalculatorDecoratorMain
+	14. package home_work_3.calcs.adapter.
+	14.8 Создать класс CalculatorStringExpressionMain
+	15 package home_work_3.tests

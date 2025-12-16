@@ -24,7 +24,7 @@ import home_work_3.calcs.api.ICalculator;
 
 
 public class CalculatorWithMemory {
-    private ICalculator obj;
+    private final ICalculator obj;
     private double result;
 
     public double load() {
