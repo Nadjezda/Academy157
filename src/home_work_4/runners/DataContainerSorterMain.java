@@ -14,6 +14,12 @@ public class DataContainerSorterMain {
         DataContainer<Integer> container = new DataContainer<>(new Integer[]{3, 1, 3, 777});
         container.sort(new IntegerComparator());
         System.out.println(Arrays.toString(container.getItems()));
+        container = new DataContainer<>(new Integer[]{3, 1, 3, 777});
+        DataContainer.sort(container);
+        System.out.println(Arrays.toString(container.getItems()));
+        container = new DataContainer<>(new Integer[]{3, 1, 3, 777});
+        DataContainer.sort(container,new IntegerComparator());
+        System.out.println(Arrays.toString(container.getItems()));
 
 
         //	9.2 Пример data = ["i", "hello", "1", "Как домашка"]. Вызывают sort(....)
@@ -21,6 +27,12 @@ public class DataContainerSorterMain {
 
         DataContainer<String> container1 = new DataContainer<>(new String[]{"i", "hello", "1", "Как домашка"});
         container1.sort(new StringLengthComparator());
+        System.out.println(Arrays.toString(container1.getItems()));
+        container1 = new DataContainer<>(new String[]{"i", "hello", "1", "Как домашка"});
+        DataContainer.sort(container1);
+        System.out.println(Arrays.toString(container1.getItems()));
+        container1 = new DataContainer<>(new String[]{"i", "hello", "1", "Как домашка"});
+        DataContainer.sort(container1, new StringLengthComparator());
         System.out.println(Arrays.toString(container1.getItems()));
     }
 }

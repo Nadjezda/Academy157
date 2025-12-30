@@ -1,13 +1,16 @@
 package home_work_4.generics;
 
 
+import home_work_4.utils.DataContainerIterator;
+
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Iterator;
 
 //1. Создать класс DataContainer у которого есть один дженерик (обобщение). Например литерал T.
 // Данный класс как раз и будет решать задачу поставленную перед нами:
 // хранить неограниченное количество передаваемых объектов обобщённого типа.
-public class DataContainer <T> {
+public class DataContainer <T> implements Iterable <T> {
 
 //2. Внутри DataContainer должно быть поле T[] data, внутренний массив, которое предназначено
 // для хранения передаваемых объектов. Да, именно T[] а не Object[]. Если использовать Object[]
@@ -97,16 +100,7 @@ public class DataContainer <T> {
 // Классом Arrays пользоваться запрещено. Интефейс Comparator обязательно должен быть реализован
 // отдельным классом. Для каждого типа данных и сравнений программист создаёт отдельную реализацию интерфейса Comparator.
     public void sort(Comparator<T> comparator) {
-        Comparator <T> cmp = Comparator.nullsLast(comparator);
-        for (int j = data.length - 1; j >= 1; j--){
-            for (int i = 0; i < data.length - 1; i++) {
-                if (cmp.compare(data[i], data[i + 1]) > 0) {
-                    T tmp = data[i];
-                    data[i] = data[i + 1];
-                    data[i + 1] = tmp;
-                }
-                }
-            }
+        sort(this, comparator);
     }
 
 //10. Переопределить метод toString() в классе и выводить содержимое data без ячеек в которых хранится null.
@@ -128,10 +122,40 @@ public class DataContainer <T> {
 // с дженериком extends Comparable. Данный метод будет сортировать элементы в ПЕРЕДАННОМ объекте
 // DataContainer используя реализацию сравнения вызываемый у хранимых объектов. Для этого надо сделать
 // дженерик метод.
-    public static void sort (DataContainer<? extends Comparable> container){
-
+    public static <E extends Comparable<E>> void sort (DataContainer<E> container){
+        Comparator<E> cmp = (E e1, E e2) -> {
+            return e1.compareTo(e2);
+        };
+        sort(container, cmp);
     }
 
+
+
+    //12.* В DataContainer добавить СТАТИЧЕСКИЙ метод void sort(DataContainer<.............> container,
+    // Comparator<.......> comparator) который будет принимать объект DataContainer и реализацию интерфейса
+//Comparator. Данный метод будет сортировать элементы в ПЕРЕДАННОМ объекте DataContainer
+// используя реализацию сравнения из ПЕРЕДАННОГО объекта интерфейса Comparator.
+    public static <T> void sort(DataContainer<T> datac, Comparator<T> comparator) {
+        Comparator <T> cmp = Comparator.nullsLast(comparator);
+        for (int j = datac.data.length - 1; j >= 1; j--){
+            for (int i = 0; i < datac.data.length - 1; i++) {
+                if (cmp.compare(datac.data[i], datac.data[i + 1]) > 0) {
+                    T tmp = datac.data[i];
+                    datac.data[i] = datac.data[i + 1];
+                    datac.data[i + 1] = tmp;
+                }
+            }
+        }
+    }
+
+
+    //13.** Реализовать в DataContainer интерфейс Iterable
+
+    //eдинственный метод интерфейса, возвращающий объект Iterator.
+    @Override
+    public Iterator<T> iterator() {
+        return new DataContainerIterator(data);
+    }
 }
 
 

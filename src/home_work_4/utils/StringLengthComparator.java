@@ -1,7 +1,5 @@
 package home_work_4.utils;
 
-import home_work_2.sorts.SortsUtils;
-
 import java.util.Comparator;
 
 public class StringLengthComparator implements Comparator<String>{

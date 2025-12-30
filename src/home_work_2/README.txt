@@ -8,15 +8,15 @@
     1.5. Задачи в презентации. пакет loops файл Hw1Part5
     1.6. Вывести таблицу умножения в консоль. пакет loops файл  Comp1Part6
 2. Массивы:
-	2.1. Создать класс ArraysUtils. пакет arrays
+	2.1. Создать класс ArraysUtils. пакет b_arrays
 		
 			2.1.1.1. Пример в отдельном классе с main. int[] container = arrayFromConsole(). файл Dz2_1_1_1
 			2.1.2.1. Пример в отдельном классе с main. int[] container = arrayRandom(5, 100). файл Dz2_1_1_1
 
-	2.2 Создать класс ArraysIteration.  пакет arrays файл ArraysIteration
-	2.3* Выполнить задание 2.2 иным способом. Создать интерфейс IArraysOperation пакет arrays файлы DoWhileOperation,
+	2.2 Создать класс ArraysIteration.  пакет b_arrays файл ArraysIteration
+	2.3* Выполнить задание 2.2 иным способом. Создать интерфейс IArraysOperation пакет b_arrays файлы DoWhileOperation,
 	WhileOperation, ForOperation, ForEachOperation.
-	2.4 Задачи в презентации. пакет arrays файл Dz2Part4
+	2.4 Задачи в презентации. пакет b_arrays файл Dz2Part4
 3. Нарисовать блок схему алгоритма работы шейкерной сортировки Untitled Diogram
 4. Выполнить сортировку массива с числами:
 	4.1. Создать класс SortsUtils. пакет utils файл SortsUtils
@@ -25,8 +25,8 @@
 
 5. Vail5, Vail5Part1, Vail5Part2, For5Part3, Hw5Part5, Overflow5Part4  и в папке test с такими же названиями + Test.
 
-6. пакет tests.arrays файлы DoWhileOperationTest, WhileOperationTest, ForOperationTest, ForEachOperationTest.
+6. пакет tests.b_arrays файлы DoWhileOperationTest, WhileOperationTest, ForOperationTest, ForEachOperationTest.
 
-7. пакет arrays файл Dz7 и пакет tests.arrays файл Dz7Test.
+7. пакет b_arrays файл Dz7 и пакет tests.b_arrays файл Dz7Test.
 
 8. пакет tests.sorts файл SortUtilsTest.
