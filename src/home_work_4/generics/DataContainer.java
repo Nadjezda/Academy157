@@ -32,18 +32,15 @@ public class DataContainer <T> {
 //4. В данном классе должен быть метод int add(T item) который добавляет данные во внутреннее поле data и возвращает
 // номер позиции в которую были вставлены данные, начиная с 0.
     public int add(T item) {
-        int i = 0;
+        int i;
         if (item == null) {
             return -1;
         }
         for (i = 0; i <= data.length; i++) {
             if (i == data.length) {
-                T[] copy = Arrays.copyOf(data, data.length + 1);
-                copy[copy.length - 1] = item;
-                data = copy;
+                data = Arrays.copyOf(data, data.length + 1);
+                data[data.length - 1] = item;
                 break;
-            } else if (data[i] != null) {
-                continue;
             } else if (data[i] == null) {
                 data[i] = item;
                 break;
@@ -54,7 +51,7 @@ public class DataContainer <T> {
 
 
     public T get(int index) {
-        if (index < data.length) {
+        if (index < data.length && index >= 0) {
             return data[index];
         } else {
             return null;
@@ -63,14 +60,13 @@ public class DataContainer <T> {
 
 //7. Добавить метод boolean delete(int index) который будет удалять элемент из нашего поля data по индексу.
     public boolean delete(int index) {
-        if (index > data.length - 1) {
+        if (index > data.length - 1 || index < 0) {
             return false;
         } else {
             for (int i = index; i < data.length - 1; i++) {
                 data[i] = data[i + 1];
             }
-            T[] copy = Arrays.copyOf(data, data.length - 1);
-            data = copy;
+            data = Arrays.copyOf(data, data.length - 1);
         }
         return true;
     }
@@ -81,17 +77,15 @@ public class DataContainer <T> {
             return false;
         } else
             for (int i = 0; i <= data.length - 1; i++) {
-                if (!item.equals(data[i])) {
-                    continue;
-                } else {
+                if (item.equals(data[i])) {
                     for (int j = i; j < data.length; j++) {
                         if (j < data.length - 1) {
                             data[j] = data[j + 1];
                         } else if (j == data.length - 1)
                             data[j] = null;
                     }
-                    T[] copy = Arrays.copyOf(data, data.length - 1);
-                    data = copy;
+                    data = Arrays.copyOf(data, data.length - 1);
+
                     return true;
                 }
             }
@@ -103,9 +97,10 @@ public class DataContainer <T> {
 // Классом Arrays пользоваться запрещено. Интефейс Comparator обязательно должен быть реализован
 // отдельным классом. Для каждого типа данных и сравнений программист создаёт отдельную реализацию интерфейса Comparator.
     public void sort(Comparator<T> comparator) {
+        Comparator <T> cmp = Comparator.nullsLast(comparator);
         for (int j = data.length - 1; j >= 1; j--){
             for (int i = 0; i < data.length - 1; i++) {
-                if (comparator.compare(data[i], data[i + 1]) > 0) {
+                if (cmp.compare(data[i], data[i + 1]) > 0) {
                     T tmp = data[i];
                     data[i] = data[i + 1];
                     data[i + 1] = tmp;
@@ -123,7 +118,7 @@ public class DataContainer <T> {
             if (i == 0 & data[i] != null) {
                 stb.append(data[i]);
             } else if (i >0 && data[i] != null){
-                stb.append(", " + data[i]);
+                stb.append(", ").append(data[i]);
             }
         }
         return "[" +  stb + "]";
@@ -136,6 +131,7 @@ public class DataContainer <T> {
     public static void sort (DataContainer<? extends Comparable> container){
 
     }
+
 }
 
 
