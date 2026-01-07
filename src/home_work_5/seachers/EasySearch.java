@@ -3,9 +3,7 @@ package home_work_5.seachers;
 
 import home_work_5.seachers.api.IGetCount;
 import home_work_5.seachers.api.ISearchEngine;
-import home_work_5.utils.AddSpase;
 import home_work_5.utils.CleanText;
-import home_work_5.utils.RemovePunctuation;
 import home_work_5.utils.ReturnCount;
 
 public class EasySearch implements ISearchEngine, IGetCount {

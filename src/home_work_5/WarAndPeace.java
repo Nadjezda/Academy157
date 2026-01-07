@@ -20,7 +20,7 @@ public class WarAndPeace {
         RegExSearch re = new RegExSearch();
         SearchEngineDecorator esDecorator = new SearchEngineDecorator(es);
         try(BufferedReader reader =
-                    new BufferedReader(new FileReader("Warandpeace.txt"))) {
+                    new BufferedReader(new FileReader("homeWork\\src\\home_work_5\\Война и мир_книга.txt"))) {
             String string = reader.readLine();
             while (string != null) {
                 string = reader.readLine();

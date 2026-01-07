@@ -4,7 +4,7 @@ import home_work_3.calcs.adapter.api.IHandler;
 import home_work_3.calcs.api.ICalculator;
 import home_work_3.calcs.simple.CalculatorWithOperator;
 
-import java.util.Map;
+
 import java.util.PriorityQueue;
 
 public class CalculatorAdapter {
