@@ -26,22 +26,22 @@ public class WarAndPeace2 {
         SearchEngineDecorator decEse = new SearchEngineDecorator (ese);
         ese.search(removePunctuation(string), " война ");
         rese.search(string, "Война");
-        decRese.search(string, "война");
-        decEse.search(string, " война ");
+        decRese.search(string, "ВОЙНА");
+        decEse.search(string, " ВОЙНА ");
         System.out.print("Слово война: (ese.getCount())-" + ese.getCount() + "\n(rese.getCount().aperCase)-" +
                 rese.getCount() + "\n(decRese.getCount())-" + decRese.getCount()
                 + "\n(decEse.getCount())-" + decEse.getCount() + "");
         ese.search(removePunctuation(string), " мир ");
         rese.search(string, "Mир");
-        decRese.search(string, "мир");
-        decEse.search(string, " мир ");
+        decRese.search(string, "МИР");
+        decEse.search(string, " МИР ");
         System.out.println(" \nСлово мир: (ese.getCount())-" + ese.getCount() + "\n(rese.getCount().aperCase)-" +
                 rese.getCount() + "\n(decRese.getCount())-" + decRese.getCount()
                 + "\n(decEse.getCount())-" + decEse.getCount() + "");
         ese.search(removePunctuation(string), " и ");
-        rese.search(string, "и");
-        decRese.search(string, "и");
-        decEse.search(string, " и ");
+        rese.search(string, "И");
+        decRese.search(string, "И");
+        decEse.search(string, " И ");
         System.out.println("\nСлово и: (ese.getCount())-" + ese.getCount() + "\n(rese.getCount().aperCase)-" +
                 rese.getCount() + "\n(decRese.getCount())-" + decRese.getCount()
                 + "\n(decEse.getCount())-" + decEse.getCount() + "");

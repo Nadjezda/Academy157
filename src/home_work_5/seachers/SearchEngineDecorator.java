@@ -2,7 +2,6 @@ package home_work_5.seachers;
 
 import home_work_5.seachers.api.IGetCount;
 import home_work_5.seachers.api.ISearchEngine;
-import home_work_5.utils.RemovePunctuation;
 import home_work_5.utils.RemovePunctuationEx;
 import home_work_5.utils.ReturnCount;
 import java.util.regex.Matcher;
@@ -31,14 +30,19 @@ public class SearchEngineDecorator implements ISearchEngine, IGetCount {
             String cleanText = RemovePunctuationEx.removePunctuation(text);
             count = ReturnCount.returnCount(cleanText.toLowerCase(), word.toLowerCase());
         } else if (searcher instanceof RegExSearchEx) {
-            String regex = "[\\p{Punct}\\p{Space}]" + Pattern.quote(word) + "[^a-zA-Zа-яА-ЯёЁ]";
-            Pattern pattern = Pattern.compile(regex, 0);
-            Matcher matcher = pattern.matcher(text.toLowerCase());
-            count = 0;
-            while (matcher.find()) {
-                ++count;
+            String regex = "[\\p{Punct}\\s]" + "(?i)" +word + "[\\p{Punct}\\s]";
+            String regex1 = "^" + word;
+            Pattern pattern = Pattern.compile(regex,Pattern.UNICODE_CHARACTER_CLASS);
+            Pattern pattern1 = Pattern.compile(regex1, Pattern.CASE_INSENSITIVE| Pattern.UNICODE_CHARACTER_CLASS);
+            Matcher matcher = pattern.matcher(text);
+            Matcher matcher1 = pattern1.matcher(text);
+            if (matcher1.find() && matcher1.start() == 0) {
+                count++;
             }
-        }
+                while (matcher.find()){
+                    count++;
+                }
+            }
             return count;
     }
 }
