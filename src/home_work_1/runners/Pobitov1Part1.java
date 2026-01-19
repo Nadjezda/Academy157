@@ -14,10 +14,14 @@ public class Pobitov1Part1 {
         System.out.println("Enter number2: ");// например 8 в двоичной 00001000
         int b = console.nextInt();// b = 00001000
 
-        int pobitAnd = a & b;// итог ноль
-        int pobitOr = a | b;// итог 14 в двоичной 00001110
+        int pobitAnd = a & b;// итог ноль. Если 1-цы совпадають - тогда 1, иначе 0. Итог 00000000
+        int pobitOr = a | b;// итог 14 в двоичной 00001110.Если есть 1 то 1, иначе 0.
+        int pobitExcludeOr = a ^ b;//если числа совпадают 0, не совпадают - 1. Итог 14 в двоичной 00001110.
+        int pobitNo = ~a;// все числа меняются на противоположные. Итог 11111001 или -7.
 
         System.out.println(pobitAnd);
         System.out.println(pobitOr);
+        System.out.println(pobitExcludeOr);
+        System.out.println(pobitNo);
     }
 }
